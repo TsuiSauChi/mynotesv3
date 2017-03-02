@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar primary>
+    <ion-title>
+      Add Task
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button light (click)="close()">
+        <span showWhen="ios">Cancel</span>
+        <ion-icon name="close" showWhen="android"></ion-icon>
+        <ion-icon name="close" showWhen="windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<br/><br/><br/>
+
+
+<ion-content>
+  <form (submit)="addTask(
+    task.value,
+    category.value,
+    notes.value)">
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Task</ion-label>
+      <ion-input type="text" #task ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label stacked>Category</ion-label>
+      <ion-input type="text" #category ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Notes</ion-label>
+      <ion-input type="text" #notes ></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button full round type="submit" value="submit">Save</button>
+  </div>
+  </form>
+</ion-content>

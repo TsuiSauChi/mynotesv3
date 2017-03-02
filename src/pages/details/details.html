@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+      <ion-card-header>
+        <strong>{{task.task}}</strong>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Category: </strong> {{task.category}}</p>
+        <hr />
+        {{task.notes}}
+      </ion-card-content>
+    </ion-card>
+</ion-content>
